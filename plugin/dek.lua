@@ -9,7 +9,7 @@ end
 
 local path = find_toml_parser()
 if path then
-  vim.treesitter.language.add("dek", { path = path })
+  vim.treesitter.language.add("dek", { path = path, symbol_name = "toml" })
 else
   vim.notify("nvim-dek: toml parser not found, install tree-sitter-toml", vim.log.levels.WARN)
 end
